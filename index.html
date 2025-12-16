@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Markets — Sector & Factor Performance</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Markets</h1>
+    <div class="controls">
+      <select id="viewSelector" aria-label="Select view">
+        <option value="sectors">Sectors</option>
+        <option value="factors">Style Factors</option>
+      </select>
+      <button id="refreshBtn" title="Refresh data">⟳</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="status" class="status">Loading…</section>
+    <section id="grid" class="grid" aria-live="polite"></section>
+    <section id="footer" class="footer">
+      <small>Data source: FinancialModelingPrep (FMP). Add your FMP API key in <code>config.js</code>.</small>
+    </section>
+  </main>
+
+  <!-- Load user config first (user creates config.js from config.example.js) -->
+  <script src="config.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
